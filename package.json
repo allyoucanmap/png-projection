@@ -1,0 +1,27 @@
+{
+  "name": "png-projection",
+  "version": "1.0.0",
+  "description": "png-projection",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "compile": "rimraf dist && mkdirp ./dist && webpack --config ./webpack.config.js --mode production"
+  },
+  "author": "allyoucanmap",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.2.3",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.4",
+    "eslint": "5.11.1",
+    "eslint-loader": "2.1.1",
+    "webpack": "4.28.3",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.14"
+  },
+  "dependencies": {
+    "d3-geo-polygon": "1.6.2",
+    "d3-geo-projection": "2.6.0"
+  }
+}

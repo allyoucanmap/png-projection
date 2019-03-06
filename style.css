@@ -1,0 +1,80 @@
+
+body, html {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    border-right: 1px solid #333; 
+}
+
+.toolbar * {
+    width: 100%;
+    color: #333;
+}
+
+.toolbar > * {
+    margin: 8px auto;
+}
+
+.loader {
+    position: fixed;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52, 52, 52, 0.5);
+    display: flex;
+}
+
+.loader:before {
+    content: '';
+    box-sizing: border-box;
+    display: block;
+    border: 8px solid transparent;
+    border-top: 8px solid #ffffff;
+    border-bottom: 8px solid #ffffff;
+    border-radius: 50%; 
+    width: 128px;
+    height: 128px;
+    animation: spin-right 2s linear infinite;
+    opacity: 0.75;
+    margin: auto;
+}
+
+.content {
+    background-color: #f2f2f2;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content > canvas {
+    margin: 8px auto;
+}
+
+@keyframes spin-right {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
